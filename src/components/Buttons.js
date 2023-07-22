@@ -1,22 +1,22 @@
 import satData from "./satData";
-import App from "../App";
 
 
-const Buttons = () => {
-  <>
-   { displaySats.map((id,sat) => {
-  return (
-    <div>
-      <button key ={id} onClick={filterByType()}>{sat} Orbit  </button>
-      </div>
-  );
-    })}
+const Buttons = ({ setSat, displaySats, filterByType }) => {
 
-    <button onClick={setSat(satData)}></button>
-      <button onClick={displaySats}>All Orbits</button>
-      <button>All Orbits</button>
-  
-</>
+  {
+    displaySats.map((id, sat) => {
+      return (
+        <>
+          <button key={id} onClick={() => filterByType(sat)}>{sat}
+           Orbit
+          </button>
+          
+          <button onClick={() => setSat(satData)}>Try me!</button>
+      </>
+      );
+
+    }
+   )}
 }
 export default Buttons;
 
