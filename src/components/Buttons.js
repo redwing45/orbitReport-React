@@ -3,21 +3,23 @@ import satData from "./satData";
 
 const Buttons = ({ setSat, displaySats, filterByType }) => {
 
-  {
-    displaySats.map((id, sat) => {
-      return (
-        <>
-          <button key={id} onClick={() => filterByType(sat)}>{sat}
-           Orbit
+  return(
+    <div>
+      {displaySats.map((id,sat) => {
+        return(
+          <button onClick={() => filterByType(sat)} key={id}>
+           {sat} Orbit
           </button>
-          
-          <button onClick={() => setSat(satData)}>Try me!</button>
-      </>
-      );
 
-    }
-   )}
-}
+        );
+      })}
+      <button onClick={() => setSat(satData)}>
+        All Orbits
+      </button>
+    </div>
+  );
+
+};
 export default Buttons;
 
 
