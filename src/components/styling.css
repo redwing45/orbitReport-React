@@ -1,7 +1,9 @@
-h1,
-p {
+h1, p{
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   text-align: center;
+  font-size: 40px;
+  color: darkcyan;
+  padding: 10px
 }
 
 button {
@@ -58,3 +60,10 @@ h1 {
   color: white;
   font-size: 60px;
 }
+
+/* .bigger{
+  font-size: medium;
+  color:darkcyan;
+  text-align: right;
+
+} */
